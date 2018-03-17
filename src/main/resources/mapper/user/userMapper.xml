@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huiyx.user.dao.UserDao">
+	<resultMap id="userResultMap" type="user">
+		<id column="user_id" property="userId" jdbcType="NUMERIC" />
+		<result column="user_name" property="userName" jdbcType="VARCHAR" />
+		<result column="real_name" property="realName" jdbcType="VARCHAR" />
+		<result column="password" property="passWord" jdbcType="VARCHAR" />
+		<result column="user_state" property="userState" jdbcType="CHAR" />
+		<result column="insert_time" property="insertTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="userCols">
+		user_name,real_name,password,user_state,insert_time,update_time
+	</sql>
+
+	<insert id="addUser" useGeneratedKeys="true" keyProperty="userId"
+		parameterType="user">
+		insert into
+		t_user(
+		<include refid="userCols" />
+		)
+		values
+		(#{userName},#{realName},#{passWord},#{userState},now(),now())
+	</insert>
+
+	<select id="getUserById" resultMap="userResultMap"
+		parameterType="long">
+		select
+		user_id,
+		<include refid="userCols" />
+		from t_user where user_id =#{userId}
+	</select>
+
+	<select id="getUserByIncludeValue" parameterType="java.lang.String"
+		resultMap="userResultMap">
+		<bind name="real_name" value="'%' + realName + '%'" />
+		select
+		user_id,
+		<include refid="userCols" />
+		from t_user where real_name like #{real_name}
+	</select>
+
+	<select id="getUsersByRealName" resultMap="userResultMap">
+		select user_id,
+		<include refid="userCols" />
+		from t_user
+		where 1=1
+		<if test="realName!=null and realName!=''">
+			and real_name like concat('%',#{realName},'%')
+		</if>
+	</select>
+
+	<select id="getUserList" resultMap="userResultMap">
+		select user_id,
+		<include refid="userCols" />
+		from t_user
+	</select>
+	
+	<delete id="deleteUserById" parameterType="long">
+		delete from t_user where user_id = #{userId}
+	</delete>
+</mapper>

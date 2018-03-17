@@ -1,0 +1,104 @@
+.uploadListTop{border:1px solid #ccc;background: #fff;padding:2%;border-radius: 0.2rem}
+/*.uploadList{margin-top: 1.5rem;}*/
+.uploadList input[type="button"]{background: #fff;border-radius: 0.3rem;border:1px solid #FE5D53;position: absolute;top:50%;width: 10.083rem;color: #FE5D53;height: 2.916rem;line-height: 2.916rem;margin-top: -1.458rem;font-size: 1.25rem}
+.uploadList input[type="file"]{position: absolute;z-index: 1;width: 10.083rem;opacity: 0;top: 50%;height: 2.916rem;margin-top: -1.458rem;}
+.picBox{width: 12.083rem;float: right;height: 7.583rem;}
+/*.uploadList{position: relative;}*/
+/*img.picId{width: 100%;height:100%;}*/
+
+
+.tab-ul{width: 100%;background: #fff;border-bottom: 1px solid #ccc;position: fixed;top: 0;left: 0;z-index: 10;}
+.tab-ul li{width: 33.33%;float: left;text-align: center;color: #333;height: 3rem;line-height: 3rem;}
+.tab-ul li.on{color: #fe5d53;border-bottom: 4px solid #fe5d53;}
+
+.uploadCon{display: none;padding:4% 2% 2%;z-index: 1;}
+.disBlock{display: block;}
+.uploadListTop{border:1px solid #ccc;background: #fff;padding:4%;border-radius: 0.2rem}
+.uploadList{padding:2% 0;}
+/*.uploadList input[type="button"]{background: #fff;border-radius: 0.15rem;border:1px solid #fc7068;position: absolute;top:50%;width: 40%;color: #e7453c;height: 3rem;line-height: 3rem;margin-top: -1.5rem;}*/
+/*.uploadList input[type="file"]{position: absolute;z-index: 1;width: 40%;opacity: 0;top: 50%;height: 3rem;margin-top: -1.5rem;}*/
+/*.picBox{width: 50%;float: right;}*/
+.uploadList{position: relative;}
+img.picId{width: 100%;height:100%;}
+.warmPrompt{
+    line-height: 1.8rem;
+    padding: 2%;
+}
+
+p.sure {
+    line-height: 1.5rem;
+}
+
+
+.yulan{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 100%;
+    background: #000;
+    z-index: 99999999;
+}
+.yulan #img0, .yulan #img1, .yulan #img3, .yulan #img4, .yulan #img5, .yulan #img6, .yulan #img7, .yulan #img8{
+    display: inline-block;
+    max-width: 90%;
+    line-height: 100%;
+    max-height: 90%;
+    top: 40%; left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    position: absolute;
+}
+.enter{
+    position: absolute;
+    height: 4rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+
+}
+.enter .btn-2,.enter .btn-3{
+    border: 0;
+    outline: none;
+    background: #fe5d53;
+    color: #fff;
+    height: 100%;
+    width: 49%;
+    font-size: 1.5rem;
+}
+.enter .btn-2{float: left;}
+.enter .btn-3{float: right;}
+#zhez{
+    background: #000;
+    display: block;
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#zhez img{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 43%;
+    left: 45%;
+}
+#zhez .upload{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 33%;
+    font-size: 1.333rem;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+

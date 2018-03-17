@@ -1,0 +1,19 @@
+.container {max-width:100%;width:100%;background:url(../../images/poster/makerBack2.png) no-repeat;background-size:100% 100%;height:100%;}
+.topImg {width:100%;position:relative;}
+.topImg img {width:100%;height:100%;}
+.logoImg {width:5.35rem;position:absolute;top:5.18%;right:5.35%;}
+.introduce {font-size:1.916rem;color:#fff;letter-spacing:2px;text-align:right;text-indent:0.4rem;width:72%;margin:5% auto 3% auto;}
+.duty {display:inline-block;font-size:1.33rem;letter-spacing:1px;}
+.bottomList {color:#fff;overflow:hidden;width:82.6%;margin:0 auto;}
+.bottomList span {display:inline-block;}
+.bottomList img {width:94%;}
+.listP {font-size:1.5rem;width:67%;float:left;letter-spacing:1px;}
+.listP p {line-height:3rem;}
+.listP p:last-child {line-height:2.2rem;}
+.scaImg {width:30%;float:right;display:inline-block;margin-top:8%;}
+@media screen and (max-width:320px) {.listP {font-size:1.2rem;width:64%;float:left;letter-spacing:1px;}
+}
+@media screen and (max-width:320px) {.scaImg {width:34%;}
+}
+.bottomImg img:first-child {width:100%;display:inline-block;margin-top:11%;}
+.bottomImg img:last-child {width:53%;display:inline-block;margin-left:24%;margin-top:1%;}

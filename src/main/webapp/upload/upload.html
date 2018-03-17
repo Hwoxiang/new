@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传</title>
+    <style type="text/css">
+        .showimg{width:20rem;height:11rem;}
+        .upImage{  width: 10rem;
+            height: 3rem;
+            line-height: 3rem;
+            border: 1px solid rgb(255,76,71);
+            text-align: center;
+            border-radius: 3px;
+            margin-left: 4rem;
+            color: white;
+            background-color: rgb(255,76,71);
+            cursor: pointer; }
+        .ifile{display:none;}
+    </style>
+</head>
+<body>
+<img id="showimg" name="showimg" class="showimg" src="/image/bg.jpg"/>
+<br/>
+<div class="upImage" id="upImage">
+    上传图片
+    <input type="file" name="ifile" id="ifile" class="ifile" />
+</div>
+
+<form id="form1" name="form1" method="post" action="/uploadFile/uploadImage">
+    <input type="hidden" name="files" id="files" class="files"/>
+</form>
+<input type="button" id="btn" name="btn" value="确定"/>
+<script>
+
+    document.getElementById("upImage").onclick = function () {
+        document.getElementById("ifile").click();
+    };
+
+    document.getElementById("ifile").onchange = function () {
+        var ifile = document.getElementById("ifile");
+        var reader = new FileReader();
+        reader.readAsDataURL(ifile.files[0]);
+
+        reader.onload = function ()
+        {
+            console.log(reader.result);
+            document.getElementById("files").value = reader.result;
+            document.getElementById("showimg").src= reader.result;
+        }
+    };
+
+    document.getElementById("btn").onclick = function ()
+    {
+        var form1 = document.getElementById("form1");
+        form1.submit();
+    };
+</script>
+</body>
+</html>

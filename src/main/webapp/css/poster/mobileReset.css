@@ -1,0 +1,256 @@
+﻿ /*CSS Reset*/
+/*----------------------------------------------------
+ *FileName:               mobileReset.css
+ *Discription:            reset
+ *Version:                2016-03-23
+ *Author:                 wenjia
+ ----------------------------------------------------*/
+html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+body { margin: 0;padding:0;height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch;background: #efefef;font-family:"微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+a { background: transparent; text-decoration: none; color: #000; }
+a:active { outline: 0; }
+b, strong { font-weight: bold; }
+dfn { font-style:normal;}
+img { border: 0; vertical-align: middle; }  
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
+	outline: none;
+}
+input,textarea,button { border: 0; margin: 0; padding: 0; font-family:"微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;}
+textarea { resize: none;}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: #ccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #ccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #ccc; }
+
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix { display:inline-block;}
+input[type="button"], input[type="submit"], input[type="reset"], input[type="radio"] {
+-webkit-appearance: none;
+}
+textarea {-webkit-appearance: none;} 
+/* Hides from IE-mac \*/
+* html .clearfix { height:1%;}
+.clearfix { display:block;}
+/* End hide from IE-mac */
+.container{max-width: 640px;margin: 0 auto;}
+
+/* 36字体统一扩大为1.6rem */
+.bigFontSize{font-size:1.6rem}
+.upMiddleSize{font-size:1.4rem}
+.middleFontSize{font-size:1.2rem}
+.smallFontSize{font-size:1.0rem}
+
+.twenty-four{font-size:1rem;}
+.twenty-six{font-size:1.083rem;}
+.twenty-eight{font-size:1.166rem;}
+.thirty{font-size:1.25rem;}
+.thirty-two{font-size:1.333rem;}
+.thirty-four{font-size:1.416rem;}
+.thirty-six{font-size:1.5rem;}
+.thirty-eight{font-size:1.583rem;}
+.forty{font-size:1.666rem;}
+.forty-two{font-size:1.75rem;}
+.forty-four{font-size:1833rem;}
+
+.letterSpacing-half{letter-spacing: 0.5px;}
+.letterSpacing-one{letter-spacing: 1px;}
+
+
+/* 字体颜色为#333333 */
+.grayOne{color: #333333;}
+/* 字体颜色为#666666 */
+.grayTwo{color: #666666;}
+/* 字体颜色为#999999 */
+.grayThree{color: #999999;}
+/* 字体颜色为浅红 */
+.red{color: #fe5d53;}
+/* 字体颜色为绿色 */
+.green{color: #40a23d;}
+/* 字体颜色为绿色 */
+.blue{color: #0024ff;}
+
+/*左浮动*/
+.floatLeft{float: left;}
+/*右浮动*/
+.floatRight{float: right;}
+
+/*上边框*/
+.borderTop{border-top:1px solid #cccccc;}
+/*下边框*/
+.borderBottom{border-bottom:1px solid #cccccc;}
+
+/*固定底部按钮*/
+.fixBtn{height: 4rem;line-height: 4rem;background: #fe5d53;position: fixed;bottom: 0;left: 0;color: #fff;width: 100%;text-align: center;}
+/*下边距*/
+.paddingBottom{padding-bottom:4em;}
+/*上边距*/
+.paddingTop{padding-top:3em;}
+
+/*复选框*/
+.chk_1{display: none;}
+.chk_1 + label {
+	border: 1px solid #fe5d53;
+	border-radius: 2px;
+	display: inline-block;
+	position: relative;
+	display: block;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+.chk_1:checked + label {
+	border: 1px solid #fe5d53;
+	color: #fff;
+}
+.chk_1:checked + label:after {
+	content: '\2714';
+	position: absolute;
+	top: -1%;
+	left: 0px;
+	color: #fe5d53;
+	width: 100%;
+	text-align: center;
+	font-size: 1.4rem;
+	vertical-align: text-top;
+}
+.chk_2:checked + label {
+	border: 1px solid #ccc;
+	color: #fff;
+}
+.chk_2:checked + label:after {
+	color: #ccc;
+}
+/*复选框  end*/
+
+/*详情列表*/
+.detailsList{padding:0 2%;background: #fff;margin-top: 3%;}
+.detailsList .detailsTop{padding:1% 0;}
+.detailsTop .right{padding-left: 7%;}
+.detailsList>.detailsBottom:last-child{border:none;}
+.detailsBottom{padding:1% 0;}
+.detailsBottom p{line-height: 1.5em;}
+.detailsBottom p span.left{width: 25%;display: block;}
+.detailsBottom p span.right{display: block;overflow: hidden;}
+/*详情列表 end*/
+
+/*温馨提示*/
+.warm{padding:2%;}
+/*.warmPrompt{background: #fff;width: 96%;padding:4% 2%;line-height: 2rem;border:1px dashed #cccccc;}*/
+.warmPrompt{background: #fff;width: 94%;margin:0 auto;padding:4% 2%;line-height: 2rem;border:1px dashed #cccccc;}
+/*温馨提示 end*/
+
+/*获取验证码*/
+/*.getCode{padding:4% 2%;position: fixed;bottom: 4rem;background: #efefef;max-width: 640px;}*/
+.getCode{padding:4% 2%;position: fixed;bottom: 4rem;background: #efefef;max-width: 640px;width: 96%;}
+.getCode span{display: block;overflow: hidden;padding-left: 5px;}
+.input03{width: 5%;height: 2rem;border:none;}
+.input03{
+    background-image: url("../images/input02.png");
+    background-repeat: no-repeat;
+    background-size: 100%;margin-right: 1%;} 
+.a_g{
+    background-image: url("../images/input03.png");
+    background-repeat: no-repeat;
+    background-size: 100%;}
+.codeBottom{margin-top: 2%;}
+.codeBottom input[type="text"]{border:1px solid #fe5d53;width: 62%;height: 2.5rem;line-height: 2.5rem;border-radius: 2px;padding:0 2%;}
+.codeBottom input[type="button"]{width: 30%;height: 2.5rem;line-height: 2.5rem;background: #fe5d53;float: right;color: #fff;border-radius: 2px;}
+/*获取验证码 end*/
+
+/*提交成功/失败*/
+.success{text-align: center;background: #fff;margin-top: 2%;height: 4rem;line-height: 4rem;}
+.success img{width: 11%;margin-top: -0.6rem;}
+/*提交成功/失败  end*/
+
+@media screen and (min-width:240px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 9px
+
+	}
+
+}
+@media screen and (min-width:320px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 12px
+
+	}
+
+}
+@media screen and (min-width:380px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 14px
+
+	}
+
+}
+@media screen and (min-width:420px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 16px
+
+	}
+
+}
+@media screen and (min-width:450px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 17px
+
+	}
+
+}
+@media screen and (min-width:480px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 18px
+
+	}
+
+}
+@media screen and (min-width:540px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 20.25px
+
+	}
+
+}
+@media screen and (min-width:600px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 22px
+
+	}
+
+}
+@media screen and (min-width:640px) {
+
+	html,body,button,input,select,textarea {
+
+		font-size: 24px
+
+	}
+
+}
+/*Reset End*/
+
+
+
