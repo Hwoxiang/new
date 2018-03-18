@@ -13,7 +13,7 @@ public class TestMain
 		System.out.println(jedis.get("name"));
 		jedis.hset("person","name","lixiang");
 		jedis.hset("person","adds","中国北京");
-
+		System.out.println("dfasdfasdf");
 		System.out.println(jedis.hget("person","adds"));
 	}
 
